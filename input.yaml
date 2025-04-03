@@ -1,0 +1,19 @@
+  evaluation_group_1:
+    group_name: Alert Group 1
+    interval_seconds: 60
+    rules:
+      alert_1:
+        rule_name: Alert 1
+        rule_summary: This is a summary
+        filters:
+          "resource.label.service_name=a-service-name AND metric.type=run.googleapis.com/request_count"
+        aggregations:
+          alignment_period: 60s
+          per_series_aligner: ALIGN_MEAN
+          group_by_fields: []
+        project_name: "production"
+        threshold_value: 1
+        contact_point: A contact point
+
+
+        
